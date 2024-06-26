@@ -1,0 +1,38 @@
+<!DOCTYPE html><html><body>
+
+<h2>Before Arrow Function</h2>
+<p>Click the buttons!!</p>
+
+<!-- Button for showing the current date and time -->
+<button id="b1">Show Date/Time</button>
+
+<!-- Button to calculate and show the sum of 4 and 5 -->
+<button id="b2" onClick="alert(sum(4,5))">Sum of 4 and 5</button>
+
+<!-- Button to check if 5 is a positive number -->
+<button id="b3" onClick="alert(isPositive(5))">Is 5 positive?</button>
+
+<!-- Button to generate and show a random number -->
+<button id="b4" onClick="alert(ran())">Give me a random number</button>
+
+<!-- Paragraph where the date and time will be displayed -->
+<p id="txt"></p>
+
+<script>
+// Add event listener to the first button for showing date and time using an arrow function
+document.getElementById("b1").addEventListener("click", () => {
+    document.getElementById("txt").innerHTML = Date();
+});
+
+// Arrow function to calculate and return the sum of two numbers
+const sum = (a, b) => a + b; // Returns the sum of a and b
+
+// Arrow function to determine if a number is positive
+const isPositive = x => x > 0; // Returns true if x is greater than 0, otherwise false
+
+// Arrow function to generate and return a random number
+const ran = () => Math.random(); // Returns a random number between 0 (inclusive) and 1 (exclusive)
+</script>
+
+</body>
+</html>
